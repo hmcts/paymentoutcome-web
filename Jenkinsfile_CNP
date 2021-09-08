@@ -3,7 +3,7 @@
 	@Library("Infrastructure")
 	
 	def type = "nodejs"
-	def product = "rpe"
+	def product = "payment"
 	def component = "expressjs-template"
 	
 	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
