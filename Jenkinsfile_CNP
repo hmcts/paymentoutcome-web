@@ -4,7 +4,7 @@
 	
 	def type = "nodejs"
 	def product = "payment"
-	def component = "expressjs-template"
+	def component = "frontend"
 	
 	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 	
