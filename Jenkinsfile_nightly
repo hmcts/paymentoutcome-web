@@ -8,8 +8,8 @@ pipelineTriggers([cron('H 05 * * *')])
 @Library("Infrastructure")
 
 def type = "nodejs"
-def product = "payment"
-def component = "frontend"
+def product = "ccpay-paymentoutcome"
+def component = "web"
 
 withNightlyPipeline(type, product, component) {
 
