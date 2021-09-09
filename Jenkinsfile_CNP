@@ -5,14 +5,28 @@
 	def type = "nodejs"
 	def product = "ccpay"
 	def component = "paymentoutcome-web"
+
+	// Configure branches to sync with master branch
+	def branchesToSync = ['demo', 'ithc', 'perftest']
+	def vaultOverrides = [
+		'preview': 'aat',
+		'hmctsdemo': 'aat'
+	]
 	
 	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 	
 	withPipeline(type, product, component) {
-    disableLegacyDeployment()
-
+	overrideVaultEnvironments(vaultOverrides)
+	enableSlackNotifications('#cc-payments-tech')
+	enableAksStagingDeployment()
+	disableLegacyDeployment()
+	after('checkout') {
+		sh "yarn cache clean"
+		echo 'ccpay-paymentoutcome-web checked out'
+	}
     after('build') {
       yarnBuilder.yarn('build')
     }
-	
+	//Sync demo,ithc and perftest with master branch
+	syncBranchesWithMaster(branchesToSync)
 	}
