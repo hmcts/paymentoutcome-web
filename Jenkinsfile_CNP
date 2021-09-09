@@ -3,8 +3,8 @@
 	@Library("Infrastructure")
 	
 	def type = "nodejs"
-	def product = "ccpay-paymentoutcome"
-	def component = "web"
+	def product = "ccpay"
+	def component = "paymentoutcome-web"
 	
 	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 	
