@@ -21,6 +21,7 @@ The template is a working application with a minimal setup. It contains:
   * pa11y set up for accessibility testing
   * MIT license and contribution information
 
+
 ## Setup
 
 Located in `./bin/init.sh`. Simply run and follow the explanation how to execute it.
