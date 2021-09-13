@@ -1,5 +1,5 @@
 {
-  "name": "paymentoutcome-web",
+  "name": "ccpay-paymentoutcome-web",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -103,5 +103,4 @@
     "lodash": "^4.17.21",
     "glob-parent": "^5.1.2"
   }
-  
 }
