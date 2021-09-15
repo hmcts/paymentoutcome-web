@@ -42,8 +42,8 @@ jobs:
         run: yarn test:routes
       - name: Yarn test ally
         run: yarn test:a11y
-      - name: Yarn coverage unit
-        run: yarn test:coverage-unit    
+      - name: Yarn coverage
+        run: yarn test:coverage    
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
