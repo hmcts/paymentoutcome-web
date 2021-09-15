@@ -33,6 +33,7 @@ jobs:
         continue-on-error: true
       - name: Yarn setup
         run: yarn setup
+        continue-on-error: true
       - name: Yarn lint
         run: yarn lint
       - name: Yarn Test
