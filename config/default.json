@@ -1,5 +1,7 @@
 {
+  "useCSRFProtection": true,
   "security": {
+    "referrerPolicy": "origin",
     "clientId": "PAYHUB_CLIENT_ID"
   },
   "session": {
@@ -9,7 +11,7 @@
     "url": "http://localhost:8080"
   },
   "appInsights": {
-    "instrumentationKey": "some-key"
+    "instrumentationKey": false
   },
   "e2e": {
     "frontendUrl": "https://localhost:4200/",
