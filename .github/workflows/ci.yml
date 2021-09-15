@@ -31,9 +31,6 @@ jobs:
       - name: Yarn check integrity
         run: yarn check --integrity
         continue-on-error: true
-      - name: Yarn setup
-        run: yarn setup
-        continue-on-error: true
       - name: Yarn lint
         run: yarn lint
       - name: Yarn Test
