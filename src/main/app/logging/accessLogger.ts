@@ -5,7 +5,7 @@ export class AccessLogger {
     this.logger = logger
   }
 
-  log (req, res) {
+  log (req: any, res: any) {
     switch (res.statusCode) {
       case 400:
       case 401:
@@ -30,7 +30,7 @@ export class AccessLogger {
     }
   }
 
-  _buildAccessLogEntry (req, res) {
+  _buildAccessLogEntry (req: any, res: any) {
     return {
       message: `Access: ${req.method} to ${req.url} returned ${res.statusCode} ` +
       ((req.body) ? `| Request body: ${JSON.stringify(req.body)} ` : '') +
