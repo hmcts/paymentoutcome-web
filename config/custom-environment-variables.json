@@ -6,15 +6,15 @@
     "cookieName": "SESSION_ID"
   },
   "payhub": {
-    "url": "http://localhost:8080"
+    "url": "PAYHUB_URL"
   },
   "appInsights": {
-    "instrumentationKey": "some-key"
+    "instrumentationKey": "APPINSIGHTS_INSTRUMENTATIONKEY"
   },
   "e2e": {
-    "frontendUrl": "https://localhost:4200/",
-    "waitForTimeoutValue": 2600,
-    "waitForActionValue": 2000
+    "frontendUrl": "E2E_FRONTEND_URL",
+    "waitForTimeoutValue": "E2E_WAIT_FOR_TIMEOUT_VALUE",
+    "waitForActionValue": "E2E_WAIT_FOR_ACTION_VALUE"
   },
   "secrets": {
     "ccpay": {
