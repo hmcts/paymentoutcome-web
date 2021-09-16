@@ -5,7 +5,7 @@ export class ErrorLogger {
     this.logger = logger
   }
 
-  log (err: any) {
+  log (err) {
     if (err) {
       this.logger.error(`${err.stack || err}`)
       this.logger.error(JSON.stringify(err))

@@ -6,10 +6,10 @@ export class RequestLoggingHandler {
     this.apiLogger = apiLogger
   }
 
-  get (target: any, key: any) {
+  get (target, key) {
     if (contains(httpCallMethods, key)) {
       const originalMethod = target[key]
-      return (...args: any) => {
+      return (...args) => {
         this.handleLogging(key.toUpperCase(), asOptions(args[0]))
         return originalMethod.apply(this.request, args)
       }
@@ -18,7 +18,7 @@ export class RequestLoggingHandler {
     }
   }
 
-  handleLogging (method: any, options: any) {
+  handleLogging (method, options) {
     this.apiLogger.logRequest({
       method: method,
       uri: options.uri,
@@ -38,7 +38,7 @@ export class RequestLoggingHandler {
   }
 }
 
-function contains (array: any, value: any) {
+function contains (array, value) {
   return array.indexOf(value) >= 0
 }
 
@@ -46,7 +46,7 @@ function contains (array: any, value: any) {
  * Request provides a convenience method which accepts an URI string and builds the options
  * object behind the scenes. We need the options object upfront to set the logging callback on it.
  */
-function asOptions (param: any) {
+function asOptions (param) {
   if (typeof param === 'string' || param instanceof String) {
     return {
       uri: param
@@ -56,8 +56,8 @@ function asOptions (param: any) {
   }
 }
 
-function intercept (callbackFunction: any) {
-  return (err: any, response: any, body: any) => {
+function intercept (callbackFunction) {
+  return (err, response, body) => {
     if (callbackFunction) {
       callbackFunction(err, response, body)
     }
