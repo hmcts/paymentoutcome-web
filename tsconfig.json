@@ -4,7 +4,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es6",
+    "target": "es5",
     "noImplicitAny": true,
     "moduleResolution": "node",
     "noUnusedLocals": true,
@@ -17,11 +17,11 @@
     ],
     "baseUrl": "src/main",
     "paths": {
-      "router/*": [
-        "router/*"
+      "app/*": [
+        "app/*"
       ],
-      "routes/*": [
-        "routes/*"
+      "logging/*": [
+        "app/logging/*"
       ]
     },
     "typeRoots": [
