@@ -8,6 +8,9 @@
   "payhub": {
     "url": "PAYHUB_URL"
   },
+  "s2s": {
+    "url": "S2S_URL"
+  },
   "appInsights": {
     "instrumentationKey": "APPINSIGHTS_INSTRUMENTATIONKEY"
   },

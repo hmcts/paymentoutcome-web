@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Logger } from '@hmcts/nodejs-logging'
 
 export class ErrorLogger {
@@ -5,7 +6,7 @@ export class ErrorLogger {
     this.logger = logger
   }
 
-  log (err) {
+  log (err: any) {
     if (err) {
       this.logger.error(`${err.stack || err}`)
       this.logger.error(JSON.stringify(err))

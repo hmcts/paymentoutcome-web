@@ -1,14 +1,16 @@
+// @ts-ignore
 import { Logger } from '@hmcts/nodejs-logging'
+
 export class ApiLogger {
   constructor (public logger = Logger.getLogger('apiLogger.js')) {
     this.logger = logger
   }
 
-  logRequest (requestData) {
+  logRequest (requestData: any) {
     return this.logger.debug(this._buildRequestEntry(requestData))
   }
 
-  _buildRequestEntry (requestData) {
+  _buildRequestEntry (requestData: any) {
     return {
       message: `API: ${requestData.method} ${requestData.uri} ` +
       ((requestData.query) ? `| Query: ${this._stringifyObject(requestData.query)} ` : '') +
@@ -16,11 +18,11 @@ export class ApiLogger {
     }
   }
 
-  logResponse (responseData) {
+  logResponse (responseData: any) {
     this._logLevelFor(responseData.responseCode).call(this.logger, this._buildResponseEntry(responseData))
   }
 
-  _buildResponseEntry (responseData) {
+  _buildResponseEntry (responseData: any) {
     return {
       message: `API: Response ${responseData.responseCode} from ${responseData.uri} ` +
       ((responseData.responseBody) ? `| Body: ${this._stringifyObject(responseData.responseBody)} ` : '') +
@@ -29,7 +31,7 @@ export class ApiLogger {
     }
   }
 
-  _stringifyObject (object) {
+  _stringifyObject (object: any) {
     if (object !== null && typeof object === 'object') {
       return JSON.stringify(object)
     }
@@ -37,7 +39,7 @@ export class ApiLogger {
     return object
   }
 
-  _logLevelFor (statusCode) {
+  _logLevelFor (statusCode: any) {
     if (statusCode < 400) {
       return this.logger.debug
     } else if (statusCode >= 400 && statusCode < 500) {

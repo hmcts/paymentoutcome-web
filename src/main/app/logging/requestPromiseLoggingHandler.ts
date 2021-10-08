@@ -6,10 +6,10 @@ export class RequestLoggingHandler {
     this.apiLogger = apiLogger
   }
 
-  get (target, key) {
+  get (target: any, key: any) {
     if (contains(httpCallMethods, key)) {
       const originalMethod = target[key]
-      return (...args) => {
+      return (...args: any[]) => {
         this.handleLogging(key.toUpperCase(), asOptions(args[0]))
         return originalMethod.apply(this.request, args)
       }
@@ -18,7 +18,7 @@ export class RequestLoggingHandler {
     }
   }
 
-  handleLogging (method, options) {
+  handleLogging (method: any, options: any) {
     this.apiLogger.logRequest({
       method: method,
       uri: options.uri,
@@ -26,7 +26,7 @@ export class RequestLoggingHandler {
       query: options.qs
     })
     let originalCallback = intercept(options.callback)
-    options.callback = (err, response, body) => {
+    options.callback = (err: any, response: any, body: any) => {
       originalCallback(err, response, body)
       this.apiLogger.logResponse({
         uri: options.uri,
@@ -38,7 +38,7 @@ export class RequestLoggingHandler {
   }
 }
 
-function contains (array, value) {
+function contains (array: any, value: any) {
   return array.indexOf(value) >= 0
 }
 
@@ -46,7 +46,7 @@ function contains (array, value) {
  * Request provides a convenience method which accepts an URI string and builds the options
  * object behind the scenes. We need the options object upfront to set the logging callback on it.
  */
-function asOptions (param) {
+function asOptions (param: any) {
   if (typeof param === 'string' || param instanceof String) {
     return {
       uri: param
@@ -56,8 +56,8 @@ function asOptions (param) {
   }
 }
 
-function intercept (callbackFunction) {
-  return (err, response, body) => {
+function intercept (callbackFunction: any) {
+  return (err: any, response: any, body: any) => {
     if (callbackFunction) {
       callbackFunction(err, response, body)
     }

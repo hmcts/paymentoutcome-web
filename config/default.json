@@ -10,6 +10,9 @@
   "payhub": {
     "url": "http://localhost:8080"
   },
+  "s2s": {
+    "url": "http://localhost:23443"
+  },
   "appInsights": {
     "instrumentationKey": false
   },
