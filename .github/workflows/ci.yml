@@ -37,8 +37,6 @@ jobs:
         run: yarn test
       - name: Yarn test routes
         run: yarn test:routes
-      - name: Yarn test ally
-        run: yarn test:a11y
       - name: Yarn coverage
         run: yarn test:coverage    
       - name: Upload coverage to Codecov
