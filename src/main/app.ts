@@ -34,7 +34,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
-  console.log(res);
   res.setHeader(
     'Cache-Control',
     'no-cache, max-age=0, must-revalidate, no-store',

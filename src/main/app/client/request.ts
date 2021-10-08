@@ -1,5 +1,5 @@
-import { RequestLoggingHandler } from 'logging/requestPromiseLoggingHandler'
-import { ApiLogger } from 'logging/apiLogger'
+import { RequestLoggingHandler } from '../logging/requestPromiseLoggingHandler'
+import { ApiLogger } from '../logging/apiLogger'
 import * as requestPromise from 'request-promise-native'
 import * as request from 'request'
 

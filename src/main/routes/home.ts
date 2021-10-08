@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { PayhubService } from 'app/payhub/payhubService'
+import { PayhubService } from '../app/payhub/payhubService';
 
 export default function(app: Application): void {
 
