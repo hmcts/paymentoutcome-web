@@ -28,6 +28,6 @@ data "azurerm_key_vault_secret" "s2s_secret" {
 resource "azurerm_key_vault_secret" "paymentoutcome-web-s2s" {
   name          = "paymentoutcome-web-s2s"
   value         = data.azurerm_key_vault_secret.s2s_secret.value
-  key_vault_id  = data.azurerm_key_vault.ccpay_cpo_key_vault.id
+  key_vault_id  = data.azurerm_key_vault.paymentoutcome_web_key_vault.id
 }
 

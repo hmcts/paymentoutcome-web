@@ -3,13 +3,13 @@ import { PayhubService } from '../app/payhub/payhubService';
 
 export default function(app: Application): void {
 
-  app.get('/', (req, res) => {
-    const token = PayhubService
-    .getPaymentStatus();
-    res.render('home', {tt: token} );
-    // .then((token) => {
-    //   res.render('home', {tt: token} );
-    // });
+  app.get('/payment/:id/confirmation', (req, res) => {
+    const uuid = req.params.id;
+    PayhubService
+    .getPaymentStatus(uuid)
+    .then(() => {
+      res.render('home');
+    });
   });
 
 }
