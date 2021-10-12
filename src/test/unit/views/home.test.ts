@@ -3,7 +3,7 @@ import request from 'supertest';
 
 import { app } from '../../../main/app';
 
-const PAGE_URL = '/';
+const PAGE_URL = '/payment/:id/confirmation';
 const headingClass = 'govuk-heading-xl';
 
 let htmlRes: Document;

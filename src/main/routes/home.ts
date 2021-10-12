@@ -9,7 +9,8 @@ export default function(app: Application): void {
     .getPaymentStatus(uuid)
     .then(() => {
       res.render('home');
+    }).catch(()=> {
+      res.render('home');
     });
   });
-
 }
