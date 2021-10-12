@@ -8,7 +8,7 @@ describe('Home page', () => {
   describe('on GET', () => {
     test('should return sample home page', async () => {
       await request(app)
-        .get('/')
+        .get('/payment/:id/confirmation')
         .expect((res) => expect(res.status).to.equal(200));
     });
   });
