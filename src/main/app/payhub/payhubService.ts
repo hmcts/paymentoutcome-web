@@ -2,6 +2,8 @@ import request from '../../app/client/request'
 const config = require('config')
 const otp = require('otp');
 const s2sUrl =  config.get('s2s.url')
+const paymentoutcomeSecret = config.get('secrets.ccpay.paymentoutcome-web-s2s');
+const microService = config.get('security.clientId');
 export class FeesClientError extends Error {
   constructor (public message: string) {
     super(message)
@@ -15,9 +17,9 @@ export class PayhubService {
     .then((token: any) => token);
   }
   static createAuthToken() {
-    const otpPassword = otp({ secret: 'PAYMENT-S2S-SECRET' }).totp();
+    const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
     const serviceAuthRequest = {
-      microservice: "ccpay_bubble",
+      microservice: microService,
       oneTimePassword: otpPassword
     };
     return request.post({

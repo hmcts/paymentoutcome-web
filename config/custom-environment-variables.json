@@ -1,6 +1,6 @@
 {
   "security": {
-    "clientId": "PAYHUB_CLIENT_ID"
+    "clientId": "paymentoutcome_web"
   },
   "session": {
     "cookieName": "SESSION_ID"
@@ -21,7 +21,7 @@
   },
   "secrets": {
     "ccpay": {
-      "paymentoutcome-client-secret": "PAYHUB_CLIENT_SECRET"
+      "paymentoutcome-web-s2s": "PAYMENTOUTCOME_S2S_OTP_SECRET"
     }
   }
 }

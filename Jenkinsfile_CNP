@@ -5,15 +5,30 @@
 	def type = "nodejs"
 	def product = "ccpay"
 	def component = "paymentoutcome-web"
+	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 	// Configure branches to sync with master branch
 	def branchesToSync = ['demo', 'ithc', 'perftest']
+
+	def secrets = [
+		'ccpay-${env}': [
+			secret('paymentoutcome-web-s2s', 'PAYMENTOUTCOME_S2S_OTP_SECRET')
+		]
+	]
 	def vaultOverrides = [
 		'preview': 'aat',
 		'hmctsdemo': 'aat'
 	]
+
+	static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+		[ $class: 'AzureKeyVaultSecret',
+			secretType: 'Secret',
+			name: secretName,
+			version: '',
+			envVariable: envVar
+		]
+	}
 	
-	def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 	
 	withPipeline(type, product, component) {
 	overrideVaultEnvironments(vaultOverrides)
