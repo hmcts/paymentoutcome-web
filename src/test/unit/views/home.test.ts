@@ -7,7 +7,6 @@ const PAGE_URL = '/payment/:id/confirmation';
 const headingClass = 'govuk-error-summary__title';
 
 let htmlRes: Document;
-
 describe('Home page', () => {
   beforeAll(async () => {
     await request(app).get(PAGE_URL).then(res => {

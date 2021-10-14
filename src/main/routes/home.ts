@@ -7,10 +7,9 @@ export default function(app: Application): void {
     const uuid = req.params.id;
     PayhubService
     .getPaymentStatus(uuid)
-    .then((ress) => {
-      console.log(ress);
+    .then(() => {
       res.render('home', { error: false });
-    }).catch((e)=> {
+    }).catch(()=> {
       res.render('home', { error: true });
     });
   });
