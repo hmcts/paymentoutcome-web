@@ -4,9 +4,10 @@ import request from 'supertest';
 import { app } from '../../../main/app';
 
 const PAGE_URL = '/payment/:id/confirmation';
-const headingClass = 'govuk-heading-xl';
+const headingClass = 'govuk-error-summary__title';
 
 let htmlRes: Document;
+
 describe('Home page', () => {
   beforeAll(async () => {
     await request(app).get(PAGE_URL).then(res => {
@@ -14,8 +15,13 @@ describe('Home page', () => {
     });
   });
 
-  it('should display header',  () => {
+  it('should display error header',  () => {
     const header = htmlRes.getElementsByClassName(headingClass);
-    expect(header[0].innerHTML).contains('Home page for payment out come web applications');
+    expect(header[0].innerHTML).contains('There is a problem');
+  });
+
+  it('should display error body text',  () => {
+    const header = htmlRes.getElementsByClassName('govuk-list');
+    expect(header[0].innerHTML).contains('Your card payment was unsuccessful.');
   });
 });
