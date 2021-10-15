@@ -12,4 +12,11 @@ describe('Home page', () => {
         .expect((res) => expect(res.status).to.equal(200));
     });
   });
+  describe('on GET', () => {
+    test('should return sample error page', async () => {
+      await request(app)
+        .get('/payment/:id/confirmat')
+        .expect((res) => expect(res.status).to.equal(404));
+    });
+  });
 });
