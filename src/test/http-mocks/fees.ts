@@ -8,7 +8,8 @@ const s2sUrl: string = config.get<string>('s2s.url')
 
 export function resolveCreateToken () {
   mock(`${s2sUrl}`)
-    .post(new RegExp(`/lease`))
+    .persist()
+    .post(/.*/)
     .reply(HttpStatus.OK, {
       token: 'token'
     })
@@ -16,13 +17,15 @@ export function resolveCreateToken () {
 
 export function resolveGetPaymentStatus (id: any) {
   mock(`${serviceBaseURL}`)
-    .get(new RegExp(`/card-payments/${id}/status`))
+    .persist()
+    .get(/.*/)
     .reply(HttpStatus.OK)
 }
 
 
 export function resolvePaymentStatus (id: any) {
   mock(`${serviceBaseURL}`)
-    .get(new RegExp(`/card-payments/${id}/status`))
+    .persist()
+    .get(/.*/)
     .reply(HttpStatus.OK)
 }
