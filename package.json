@@ -12,7 +12,7 @@
     "build": "yarn webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production yarn webpack --mode production --config webpack.config.js",
     "test": "jest",
-    "test:coverage": "yarn merge-lcov && yarn copy-lcov",
+    "test:coverage": "jest --coverage",
     "merge-lcov": "cross-env lcov-result-merger './coverage/lcov-*.info' './coverage/lcov.info'",
     "copy-lcov": "node ./scripts/copy-lcov.js",
     "test:routes": "jest -c jest.routes.config.js",
