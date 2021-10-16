@@ -1,5 +1,5 @@
-import * as config from 'config';
-import * as mock from 'nock';
+import config from 'config';
+import mock from 'nock';
 import * as HttpStatus from 'http-status-codes';
 
 const serviceBaseURL: string = config.get<string>('payhub.url')
@@ -15,6 +15,13 @@ export function resolveCreateToken () {
 }
 
 export function resolveGetPaymentStatus (id: any) {
+  mock(`${serviceBaseURL}`)
+    .get(new RegExp(`/card-payments/${id}/status`))
+    .reply(HttpStatus.OK)
+}
+
+
+export function resolvePaymentStatus (id: any) {
   mock(`${serviceBaseURL}`)
     .get(new RegExp(`/card-payments/${id}/status`))
     .reply(HttpStatus.OK)
