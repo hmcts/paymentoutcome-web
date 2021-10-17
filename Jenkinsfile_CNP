@@ -41,7 +41,7 @@
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
     after('build') {
-      sh 'yarn ng:build'
+      yarnBuilder.yarn('build')
     }
 	//Sync demo,ithc and perftest with master branch
 	syncBranchesWithMaster(branchesToSync)
