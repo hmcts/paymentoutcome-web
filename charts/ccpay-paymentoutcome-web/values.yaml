@@ -4,7 +4,7 @@ nodejs:
   ingressHost: paymentoutcome-web.{{ .Values.global.environment }}.platform.hmcts.net
   image: 'hmctspublic.azurecr.io/ccpay/paymentoutcome-web:latest'
   keyVaults:
-    "ccpay":
+    ccpay:
       secrets:
         - paymentoutcome-web-s2s
 #  Uncomment once the vault containing the app insights key has been set up
