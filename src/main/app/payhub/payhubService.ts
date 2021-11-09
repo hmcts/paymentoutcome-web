@@ -1,10 +1,13 @@
-import request from '../../app/client/request'
-const config = require('config')
+import { Logger } from '@hmcts/nodejs-logging';
+import request from '../../app/client/request';
+const config = require('config');
 const otp = require('otp');
-const s2sUrl =  config.get('s2s.url')
-const payhubUrl =  config.get('payhub.url')
+const s2sUrl =  config.get('s2s.url');
+const payhubUrl =  config.get('payhub.url');
 const paymentoutcomeSecret = config.get('secrets.ccpay.paymentoutcome-web-s2s');
 const microService = config.get('security.clientId');
+
+const logger = Logger.getLogger('server');
 
 export class PayhubService {
   static getPaymentStatus (uuid: string): Promise<boolean> {
@@ -19,6 +22,7 @@ export class PayhubService {
     .then(() => true));
   }
   static createAuthToken() {
+    logger.info(paymentoutcomeSecret);
     const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
     const serviceAuthRequest = {
       microservice: microService,
