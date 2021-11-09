@@ -12,7 +12,7 @@
 
 	def secrets = [
 		'ccpay-${env}': [
-			secret('paymentoutcome-web-s2s', 'PAYMENTOUTCOME_S2S_OTP_SECRET')
+			secret('paymentoutcome-s2s-web', 'PAYMENTOUTCOME_S2S_OTP_SECRET')
 		]
 	]
 	def vaultOverrides = [

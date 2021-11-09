@@ -6,7 +6,7 @@ nodejs:
   keyVaults:
     ccpay:
       secrets:
-        - paymentoutcome-web-s2s
+        - paymentoutcome-s2s-web
 #  Uncomment once the vault containing the app insights key has been set up
 #  keyVaults:
 #    rpe:

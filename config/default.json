@@ -23,7 +23,7 @@
   },
   "secrets": {
     "ccpay": {
-      "paymentoutcome-web-s2s": "PAYMENTOUTCOME_S2S_OTP_SECRET"
+      "paymentoutcome-s2s-web": "PAYMENTOUTCOME_S2S_OTP_SECRET"
     }
   }
 }
