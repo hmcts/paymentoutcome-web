@@ -8,7 +8,7 @@ def type = "nodejs"
 def product = "ccpay"
 def component = "paymentoutcome-web"
 List<LinkedHashMap<String, Object>> secrets = [
-  secret('paymentoutcome-web-s2s', 'PAYMENTOUTCOME_S2S_OTP_SECRET')
+  secret('paymentoutcome-s2s-web', 'PAYMENTOUTCOME_S2S_OTP_SECRET')
 ]
 
 static LinkedHashMap<String, Object> secret(String secretName, String envVar) {

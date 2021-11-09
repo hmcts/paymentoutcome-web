@@ -8,10 +8,10 @@
     "cookieName": "SESSION_ID"
   },
   "payhub": {
-    "url": "http://localhost:8080"
+    "url": "http://localhost:8091"
   },
   "s2s": {
-    "url": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+    "url": "http://localhost:23443"
   },
   "appInsights": {
     "instrumentationKey": false
@@ -23,7 +23,7 @@
   },
   "secrets": {
     "ccpay": {
-      "paymentoutcome-web-s2s": "PAYMENTOUTCOME_S2S_OTP_SECRET"
+      "paymentoutcome-s2s-web": "PAYMENTOUTCOME_S2S_OTP_SECRET"
     }
   }
 }
