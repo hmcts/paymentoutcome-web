@@ -7,10 +7,10 @@ export default function(app: Application): void {
     const uuid = req.params.id;
     PayhubService
     .getPaymentStatus(uuid)
-    .then(() => {
-      res.render('home', { error: false });
+    .then((response: any) => {
+      res.render('home', { error: false, result: response.reference });
     }).catch(()=> {
-      res.render('home', { error: true });
+      res.render('home', { error: true, result: [] });
     });
   });
 }
