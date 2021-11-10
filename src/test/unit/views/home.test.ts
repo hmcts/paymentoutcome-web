@@ -41,7 +41,7 @@ describe('Home page success flow', () => {
 
   it('should display error body text',  () => {
     const header = htmlRes.getElementsByClassName('govuk-panel__body');
-    expect(header[0].innerHTML).contains('Your payment reference is<br><strong>true</strong>');
+    expect(header[0].innerHTML).contains('Your payment reference is<br><strong>undefined</strong>');
   });
 
 });

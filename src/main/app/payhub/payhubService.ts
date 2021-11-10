@@ -16,7 +16,7 @@ export class PayhubService {
         'Content-Type': 'application/json'
       },
     })
-    .then(() => true));
+    .then((res: any) => res));
   }
   static createAuthToken() {
     const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
