@@ -43,4 +43,5 @@ describe('Home page success flow', () => {
     const header = htmlRes.getElementsByClassName('govuk-panel__body');
     expect(header[0].innerHTML).contains('Your payment reference is<br><strong>true</strong>');
   });
+
 });
