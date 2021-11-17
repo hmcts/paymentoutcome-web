@@ -27,6 +27,7 @@ Located in `./bin/init.sh`. Simply run and follow the explanation how to execute
 
 ## Getting Started
 
+
 ### Prerequisites
 
 Running the application requires the following tools to be installed in your environment:

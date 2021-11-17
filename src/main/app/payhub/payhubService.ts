@@ -16,11 +16,11 @@ export class PayhubService {
         'Content-Type': 'application/json'
       },
     })
-    .then(() => true));
+    .then((res: any) => res));
   }
   static createAuthToken() {
-    console.log(paymentoutcomeSecret);
     const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
+    console.log(microService, paymentoutcomeSecret)
     const serviceAuthRequest = {
       microservice: microService,
       oneTimePassword: otpPassword
