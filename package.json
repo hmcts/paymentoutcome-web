@@ -112,6 +112,7 @@
   },
   "resolutions": {
     "lodash": "^4.17.21",
-    "glob-parent": "^5.1.2"
+    "glob-parent": "^5.1.2",
+    "json-schema": "^0.4.0"
   }
 }
