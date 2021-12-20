@@ -9,11 +9,9 @@ export default function(app: Application): void {
     .getPaymentStatus(uuid)
     .then((r: any) => {
       if(r.status == "success") {
-        console.log(r.status)
       res.render('home', { error: false, result: r});
       }
       else {
-        console.log(r.status)
        res.render('home', { error: true, result: [] });
       }
     }).catch(()=> {
