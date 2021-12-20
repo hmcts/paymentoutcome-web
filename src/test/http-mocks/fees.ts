@@ -19,9 +19,21 @@ export function resolveGetPaymentStatus (id: any) {
   mock(`${serviceBaseURL}`)
     .persist()
     .get(/.*/)
-    .reply(HttpStatus.OK)
+    .reply(HttpStatus.OK, {
+      status: 'success',
+      reference: 'RC-1234-1234-1343-1234'
+    })
 }
 
+export function rejectGetPaymentStatus (id: any) {
+  mock(`${serviceBaseURL}`)
+    .persist()
+    .get(/.*/)
+    .reply(HttpStatus.OK, {
+      status: 'failure',
+      reference: 'RC-1234-1234-1343-1234'
+    })
+}
 
 export function resolvePaymentStatus (id: any) {
   mock(`${serviceBaseURL}`)
