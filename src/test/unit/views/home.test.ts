@@ -56,7 +56,7 @@ describe('Home page success-error flow', () => {
 
 describe('Home page success flow', () => {
   beforeAll(async () => {
-    feesServiceMock.resolveGetPaymentStatus('success');
+    feesServiceMock.resolveGetPaymentStatus('Success');
     feesServiceMock.resolveCreateToken();
     await request(app).get(PAGE_URL).then(res => {
       htmlRes = new DOMParser().parseFromString(res.text, 'text/html');

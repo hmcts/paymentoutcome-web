@@ -8,7 +8,7 @@ export default function(app: Application): void {
     PayhubService
     .getPaymentStatus(uuid)
     .then((r: any) => {
-      if(r.status == "success") {
+      if(r.status == "Success") {
       res.render('home', { error: false, result: r});
       }
       else {
