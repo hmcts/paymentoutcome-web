@@ -132,7 +132,7 @@ included in this template app. Your njk file would look like this:
 ...
 ```
 
-#### Helmet
+### Helmet
 
 This application uses [Helmet](https://helmetjs.github.io/), which adds various security-related HTTP headers
 to the responses. Apart from default Helmet functions, following headers are set:
