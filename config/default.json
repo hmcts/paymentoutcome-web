@@ -10,6 +10,9 @@
   "payhub": {
     "url": "http://localhost:8091"
   },
+  "exui": {
+    "url": "http://localhost:8081"
+  },
   "s2s": {
     "url": "http://localhost:23443"
   },

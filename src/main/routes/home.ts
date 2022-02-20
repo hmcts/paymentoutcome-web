@@ -1,5 +1,8 @@
 import { Application } from 'express';
 import { PayhubService } from '../app/payhub/payhubService';
+const config = require('config');
+
+const exuiUrl =  config.get('exui.url');
 
 export default function(app: Application): void {
 
@@ -9,13 +12,13 @@ export default function(app: Application): void {
     .getPaymentStatus(uuid)
     .then((r: any) => {
       if(r.status == "Success") {
-      res.render('home', { error: false, result: r});
+      res.render('home', { error: false, result: r, url: exuiUrl});
       }
       else {
-       res.render('home', { error: true, result: [] });
+       res.render('home', { error: true, result: [], url: exuiUrl });
       }
     }).catch(()=> {
-      res.render('home', { error: true, result: [] });
+      res.render('home', { error: true, result: [], url: exuiUrl });
     });
   });
 }

@@ -8,6 +8,9 @@
   "payhub": {
     "url": "PAYHUB_URL"
   },
+  "exui": {
+    "url": "EXUI_URL"
+  }
   "s2s": {
     "url": "S2S_URL"
   },
