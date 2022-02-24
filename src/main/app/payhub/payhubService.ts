@@ -1,7 +1,9 @@
 import request from '../../app/client/request';
 const config = require('config');
+const otp = require('otp');
 const s2sUrl =  config.get('s2s.url');
 const payhubUrl =  config.get('payhub.url');
+const paymentoutcomeSecret = config.get('secrets.ccpay.paymentoutcome-s2s-web');
 const microService = config.get('security.clientId');
 
 export class PayhubService {
@@ -17,11 +19,15 @@ export class PayhubService {
     .then((res: any) => res));
   }
   static createAuthToken() {
-     const serviceAuthRequest = {
-        microservice: microService
-     };
+    console.log(paymentoutcomeSecret);
+    const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
+    console.log(otpPassword);
+    const serviceAuthRequest = {
+      microservice: microService,
+      oneTimePassword: otpPassword
+    };
     return request.post({
-      uri: `${s2sUrl}/testing-support/lease`,
+      uri: `${s2sUrl}/lease`,
       body: serviceAuthRequest,
       json: true
     });
