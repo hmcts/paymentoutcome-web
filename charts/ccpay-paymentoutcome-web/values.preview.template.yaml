@@ -1,9 +1,4 @@
 nodejs:
   # Don't modify below here
   image: ${IMAGE_NAME}
-  keyVaults:
-  ccpay:
-    secrets:
-      - name: paymentoutcome-s2s-web
-        alias: PAYMENTOUTCOME_S2S_OTP_SECRET
   ingressHost: ${SERVICE_FQDN}
