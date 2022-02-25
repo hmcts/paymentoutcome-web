@@ -39,11 +39,13 @@
 	after('checkout') {
 		sh "yarn cache clean"
 		echo 'ccpay-paymentoutcome-web checked out'
-		echo PAYMENTOUTCOME_S2S_OTP_SECRET
+		echo 'PAYMENTOUTCOME_S2S_OTP_SECRET'
+
 	}
     after('build') {
       yarnBuilder.yarn('build')
-		echo PAYMENTOUTCOME_S2S_OTP_SECRET
+	  echo 'PAYMENTOUTCOME_S2S_OTP_SECRET'
+
     }
 	//Sync demo,ithc and perftest with master branch
 	syncBranchesWithMaster(branchesToSync)
