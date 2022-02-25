@@ -6,7 +6,8 @@ nodejs:
   keyVaults:
     ccpay:
       secrets:
-        - paymentoutcome-s2s-web
+        - name: paymentoutcome-s2s-web
+          alias: PAYMENTOUTCOME_S2S_OTP_SECRET
   environment:
      S2S_URL: http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
      PAYHUB_URL: http://payment-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
