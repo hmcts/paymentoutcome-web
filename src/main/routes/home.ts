@@ -15,7 +15,7 @@ export default function(app: Application): void {
       res.render('home', { error: false, result: r, url: exuiUrl});
       }
       else {
-       res.render('home', { error: true, result: [], url: exuiUrl });
+       res.render('home', { error: true, result: r, url: exuiUrl });
       }
     }).catch(()=> {
       res.render('home', { error: true, result: [], url: exuiUrl });
