@@ -2,7 +2,7 @@ import { Application } from 'express';
 import { PayhubService } from '../app/payhub/payhubService';
 const config = require('config');
 
-const exuiUrl =  config.get('exui.url');
+const exuiUrl =  config.get('exui.url').replace('.prod', '');
 
 export default function(app: Application): void {
 
