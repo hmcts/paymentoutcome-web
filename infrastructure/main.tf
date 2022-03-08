@@ -24,9 +24,3 @@ data "azurerm_key_vault_secret" "s2s_secret" {
   name          = "microservicekey-paymentoutcome-web"
   key_vault_id  = data.azurerm_key_vault.s2s_key_vault.id
 }
-
-resource "azurerm_key_vault_secret" "paymentoutcome-s2s-web" {
-  name          = "paymentoutcome-s2s-web"
-  value         = data.azurerm_key_vault_secret.s2s_secret.value
-  key_vault_id  = data.azurerm_key_vault.paymentoutcome_web_key_vault.id
-}
