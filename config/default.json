@@ -8,10 +8,13 @@
     "cookieName": "SESSION_ID"
   },
   "payhub": {
-    "url": "http://localhost:8091"
+    "url": "http://payment-api-prod.service.core-compute-prod.internal"
+  },
+  "exui": {
+    "url": "https://manage-case.prod.platform.hmcts.net/cases/case-details"
   },
   "s2s": {
-    "url": "http://localhost:23443"
+    "url": "http://rpe-service-auth-provider-prod.service.core-compute-prod.internal"
   },
   "appInsights": {
     "instrumentationKey": false

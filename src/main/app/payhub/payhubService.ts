@@ -19,9 +19,7 @@ export class PayhubService {
     .then((res: any) => res));
   }
   static createAuthToken() {
-    console.log(paymentoutcomeSecret);
     const otpPassword = otp({ secret: paymentoutcomeSecret }).totp();
-    console.log(otpPassword);
     const serviceAuthRequest = {
       microservice: microService,
       oneTimePassword: otpPassword
