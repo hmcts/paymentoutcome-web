@@ -117,6 +117,7 @@
     "follow-redirects": "^1.14.7",
     "minimist": "^1.2.6",
     "moment": "^2.29.4",
-    "async": "^2.6.4"
+    "async": "^2.6.4",
+    "minimatch": "^5.1.0"
   }
 }
