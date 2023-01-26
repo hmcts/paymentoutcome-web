@@ -22,7 +22,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 
 withPipeline(type, product, component) {
 
-  after('build') {
+  afterAlways('build') {
     yarnBuilder.yarn('build')
   }
     enableSlackNotifications('#paymentoutcome-build-notices')

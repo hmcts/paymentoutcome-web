@@ -36,11 +36,11 @@
 	enableSlackNotifications('#cc-payments-tech')
 	enableAksStagingDeployment()
 	disableLegacyDeployment()
-	after('checkout') {
+	afterAlways('checkout') {
 		sh "yarn cache clean"
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
-    after('build') {
+    afterAlways('build') {
       yarnBuilder.yarn('build')
     }
 	//Sync demo,ithc and perftest with master branch
