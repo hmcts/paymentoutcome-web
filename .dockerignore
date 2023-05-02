@@ -4,6 +4,8 @@
 
 # exceptions from `exclude all` rule
 
+!.yarn/**
+!.yarnrc.yml
 !package.json
 !yarn.lock
 
@@ -12,3 +14,6 @@
 !src/main/**
 !config/**
 !webpack.config.js
+!.git
+!createVersionFile.js
+!version
