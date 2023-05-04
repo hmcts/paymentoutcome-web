@@ -1,7 +1,7 @@
-#!groovy	
-	
+#!groovy
+
 	@Library("Infrastructure")
-	
+
 	def type = "nodejs"
 	def product = "ccpay"
 	def component = "paymentoutcome-web"
@@ -28,8 +28,10 @@
 			envVariable: envVar
 		]
 	}
-	
-	
+
+  // test if Postgres is reachable
+  sh "yarn --version"
+
 	withPipeline(type, product, component) {
 	overrideVaultEnvironments(vaultOverrides)
 	loadVaultSecrets(secrets)

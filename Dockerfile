@@ -6,7 +6,6 @@ RUN corepack enable
 USER hmcts
 
 COPY --chown=hmcts:hmcts . .
-RUN yarn --version
 RUN yarn workspaces focus --all --production \
   && yarn cache clean
 
