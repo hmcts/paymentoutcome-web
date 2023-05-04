@@ -29,9 +29,6 @@
 		]
 	}
 
-  // test if Postgres is reachable
-  sh "yarn --version"
-
 	withPipeline(type, product, component) {
 	overrideVaultEnvironments(vaultOverrides)
 	loadVaultSecrets(secrets)
@@ -40,6 +37,7 @@
 	disableLegacyDeployment()
 	afterAlways('checkout') {
 		sh "yarn cache clean"
+    sh "yarn --version"
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
     afterAlways('build') {
