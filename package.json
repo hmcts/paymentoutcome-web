@@ -19,7 +19,7 @@
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
     "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y",
-    "dependency-setup-with-yarn-lock": "yarn --mutex network install --frozen-lockfile"
+    "dependency-setup-with-yarn-lock": "yarn install --immutable"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
