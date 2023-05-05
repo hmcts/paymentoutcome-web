@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: Yarn install (dependency-setup-with-yarn-lock)
+      - name: Yarn install
         run: yarn install --immutable
       - name: Install codecov globally
         run: npm install -g codecov
