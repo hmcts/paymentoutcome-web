@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=16.15.0"
   },
   "scripts": {
     "start": "NODE_ENV=production ./node_modules/.bin/ts-node -r tsconfig-paths/register src/main/server.ts",
@@ -16,16 +16,17 @@
     "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
     "sonar-scan": "sonar-scanner",
-    "test:smoke": "export NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
-    "test:functional": "export NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
+    "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
+    "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 && jest -c jest.smoke.config.js",
     "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y",
-    "dependency-setup-with-yarn-lock": "yarn --mutex network install --frozen-lockfile"
+    "dependency-setup-with-yarn-lock": "yarn install --immutable"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
     "@hmcts/nodejs-healthcheck": "^1.8.0",
-    "@hmcts/nodejs-logging": "^3.0.2",
-    "@hmcts/properties-volume": "^0.0.13",
+    "@hmcts/nodejs-logging": "^4.0.4",
+    "@hmcts/properties-volume": "^0.0.14",
+    "@snyk/protect": "^1.1081.0",
     "@types/config": "^0.0.36",
     "@types/cookie-parser": "^1.4.2",
     "@types/csurf": "^1.9.36",
@@ -89,12 +90,12 @@
     "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "mock-require": "^3.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.3",
     "nodemon": "^2.0.2",
     "pa11y": "^5.3.0",
     "request": "^2.88.2",
     "sass-lint": "^1.13.1",
-    "sass-loader": "^10.0.2",
+    "sass-loader": "^10.4.1",
     "sinon": "^9.0.3",
     "sinon-chai": "^3.4.0",
     "sonar-scanner": "^3.1.0",
@@ -120,5 +121,6 @@
     "async": "^2.6.4",
     "cookiejar": "2.1.4",
     "qs": "6.7.3"
-  }
+  },
+  "packageManager": "yarn@3.5.1"
 }

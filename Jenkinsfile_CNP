@@ -1,7 +1,7 @@
-#!groovy	
-	
+#!groovy
+
 	@Library("Infrastructure")
-	
+
 	def type = "nodejs"
 	def product = "ccpay"
 	def component = "paymentoutcome-web"
@@ -28,8 +28,7 @@
 			envVariable: envVar
 		]
 	}
-	
-	
+
 	withPipeline(type, product, component) {
 	overrideVaultEnvironments(vaultOverrides)
 	loadVaultSecrets(secrets)
@@ -38,6 +37,7 @@
 	disableLegacyDeployment()
 	afterAlways('checkout') {
 		sh "yarn cache clean"
+    sh "yarn --version"
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
     afterAlways('build') {
