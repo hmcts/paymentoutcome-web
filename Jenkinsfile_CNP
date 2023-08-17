@@ -35,6 +35,7 @@
 	enableAksStagingDeployment()
 	disableLegacyDeployment()
 	afterAlways('checkout') {
+    sh "export NODE_OPTIONS=--openssl-legacy-provider"
 		sh "yarn cache clean"
     sh "yarn --version"
 		echo 'ccpay-paymentoutcome-web checked out'
