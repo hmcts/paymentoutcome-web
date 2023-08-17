@@ -1,5 +1,5 @@
 import * as express from 'express';
-import helmet = require('helmet');
+import helmet from "helmet";
 
 export interface HelmetConfig {
   referrerPolicy: string;
@@ -15,6 +15,8 @@ export class Helmet {
   constructor(public config: HelmetConfig) {}
 
   public enableFor(app: express.Express): void {
+
+
     // include default helmet functions
     app.use(helmet());
 
