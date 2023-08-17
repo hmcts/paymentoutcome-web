@@ -41,7 +41,6 @@
 	}
     afterAlways('build') {
       sh "export NODE_OPTIONS=--openssl-legacy-provider"
-      sh "echo $NODE_OPTIONS"
       yarnBuilder.yarn('build')
     }
 	//Sync demo,ithc and perftest with master branch
