@@ -35,12 +35,13 @@
 	enableAksStagingDeployment()
 	disableLegacyDeployment()
 	afterAlways('checkout') {
-    sh "export NODE_OPTIONS=--openssl-legacy-provider"
 		sh "yarn cache clean"
     sh "yarn --version"
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
     afterAlways('build') {
+      sh "export NODE_OPTIONS=--openssl-legacy-provider"
+      sh "echo $NODE_OPTIONS"
       yarnBuilder.yarn('build')
     }
 	//Sync demo,ithc and perftest with master branch
