@@ -40,7 +40,6 @@
 		echo 'ccpay-paymentoutcome-web checked out'
 	}
     afterAlways('build') {
-      sh "export NODE_OPTIONS=--openssl-legacy-provider"
       yarnBuilder.yarn('build')
     }
 	//Sync demo,ithc and perftest with master branch
