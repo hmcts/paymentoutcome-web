@@ -19,7 +19,14 @@ module.exports = {
         'style-loader',
         MiniCssExtractPlugin.loader,
         'css-loader',
-        'sass-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              quietDeps: true, // Add this line
+            },
+          },
+        },
       ],
     },
   ],
