@@ -22,6 +22,7 @@ npm-debug.log.*
 .settings/
 dist/
 public/
+coverage/
 
 # Yarn v3
 .pnp.*
