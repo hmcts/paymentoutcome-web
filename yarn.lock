@@ -4809,10 +4809,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decode-uri-component@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "decode-uri-component@npm:0.2.0"
-  checksum: f3749344ab9305ffcfe4bfe300e2dbb61fc6359e2b736812100a3b1b6db0a5668cba31a05e4b45d4d63dbf1a18dfa354cd3ca5bb3ededddabb8cd293f4404f94
+"decode-uri-component@npm:0.3.0":
+  version: 0.3.0
+  resolution: "decode-uri-component@npm:0.3.0"
+  checksum: 1892d1b830c7c3fa14215432c32f177c9ed08e87ecf3280a0c29b46e378b4bc438c17326c579aefd00e7dc6baa9e766825e8a3f69a8e2357729b9dfadba47c4c
   languageName: node
   linkType: hard
 
