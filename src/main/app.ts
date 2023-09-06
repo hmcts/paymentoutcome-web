@@ -5,7 +5,7 @@ const { Logger } = require('@hmcts/nodejs-logging');
 import * as bodyParser from 'body-parser';
 import config = require('config');
 import cookieParser from 'cookie-parser';
-import express from 'express';
+import express, { RequestHandler} from 'express';
 import { Helmet } from './modules/helmet';
 import * as path from 'path';
 import favicon from 'serve-favicon';
@@ -29,8 +29,10 @@ new Nunjucks(developmentMode).enableFor(app);
 new Helmet(config.get('security')).enableFor(app);
 
 app.use(favicon(path.join(__dirname, '/public/img/favicon.ico')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json() as RequestHandler);
+app.use(bodyParser.urlencoded({ extended: false }) as RequestHandler);
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use((req, res, next) => {
