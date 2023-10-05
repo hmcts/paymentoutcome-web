@@ -2168,11 +2168,11 @@ __metadata:
   linkType: hard
 
 "@types/csurf@npm:^1.9.36":
-  version: 1.11.0
-  resolution: "@types/csurf@npm:1.11.0"
+  version: 1.11.3
+  resolution: "@types/csurf@npm:1.11.3"
   dependencies:
     "@types/express-serve-static-core": "*"
-  checksum: 4f64f9bc3dfc25e47f26920075a86d729e307dca033cb68366de692f033d058df6214ac67d2753470f1a9db1f0a8b6d31d3d723be1b7e0b69c086f9dd74f1650
+  checksum: 5db4b4f4adabc592846d2efe7c1c95de541adf6b536a7d6f523f1583e480a381418d3841ae2f159d81a863cc1c047559c311a0853e915e301cc717c7d0ff08f7
   languageName: node
   linkType: hard
 
