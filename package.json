@@ -127,7 +127,7 @@
     "decode-uri-component": "0.3.0",
     "json5": "1.0.2",
     "semver": "7.5.2",
-    "ajv": "6.12.3",
+    "ajv": "6.12.6",
     "http-cache-semantics": "4.1.1"
   },
   "packageManager": "yarn@3.6.4"
