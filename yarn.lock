@@ -4562,13 +4562,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "commander@npm:3.0.2"
-  checksum: 6d14ad030d1904428139487ed31febcb04c1604db2b8d9fae711f60ee6718828dc0e11602249e91c8a97b0e721e9c6d53edbc166bad3cde1596851d59a8f824d
-  languageName: node
-  linkType: hard
-
 "commander@npm:^4.1.1":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
@@ -4580,6 +4573,13 @@ __metadata:
   version: 5.1.0
   resolution: "commander@npm:5.1.0"
   checksum: 0b7fec1712fbcc6230fcb161d8d73b4730fa91a21dc089515489402ad78810547683f058e2a9835929c212fead1d6a6ade70db28bbb03edbc2829a9ab7d69447
+  languageName: node
+  linkType: hard
+
+"commander@npm:~3.0.2":
+  version: 3.0.2
+  resolution: "commander@npm:3.0.2"
+  checksum: 6d14ad030d1904428139487ed31febcb04c1604db2b8d9fae711f60ee6718828dc0e11602249e91c8a97b0e721e9c6d53edbc166bad3cde1596851d59a8f824d
   languageName: node
   linkType: hard
 
@@ -7328,10 +7328,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html_codesniffer@npm:^2.4.1":
-  version: 2.5.1
-  resolution: "html_codesniffer@npm:2.5.1"
-  checksum: f93fcda96a3145af5e5f0da71df4e5236f8078ee0c4d3236a48d780faf31c030d7e3297f9e1982198d2d45054f20ff8de56d97f72d2dd56c9f5eb8f45dd05c8a
+"html_codesniffer@npm:~2.4.1":
+  version: 2.4.1
+  resolution: "html_codesniffer@npm:2.4.1"
+  checksum: 6d3e2341fcb72319ca749b4eb438431f0991f6b31ad5bb6b29fbb8326e10dad38605f899bd1ed102db02e69ff01234b89ad17a3bc8938e789903be928e1ba773
   languageName: node
   linkType: hard
 
@@ -9753,7 +9753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node.extend@npm:^2.0.2":
+"node.extend@npm:~2.0.2":
   version: 2.0.2
   resolution: "node.extend@npm:2.0.2"
   dependencies:
@@ -10133,7 +10133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-timeout@npm:^2.0.1":
+"p-timeout@npm:~2.0.1":
   version: 2.0.1
   resolution: "p-timeout@npm:2.0.1"
   dependencies:
@@ -10149,7 +10149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pa11y-reporter-cli@npm:^1.0.1":
+"pa11y-reporter-cli@npm:~1.0.1":
   version: 1.0.1
   resolution: "pa11y-reporter-cli@npm:1.0.1"
   dependencies:
@@ -10158,14 +10158,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pa11y-reporter-csv@npm:^1.0.0":
+"pa11y-reporter-csv@npm:~1.0.0":
   version: 1.0.0
   resolution: "pa11y-reporter-csv@npm:1.0.0"
   checksum: 8bbbc6d104ca67df823ad58abc9c20ff793d340c92fe69902542bd66db718fd5bb12a19b16c67135f5d4b02a73781c4132c2a07f192d168175c5e9de0a8b1074
   languageName: node
   linkType: hard
 
-"pa11y-reporter-json@npm:^1.0.0":
+"pa11y-reporter-json@npm:~1.0.0":
   version: 1.0.0
   resolution: "pa11y-reporter-json@npm:1.0.0"
   dependencies:
@@ -10174,7 +10174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pa11y-runner-axe@npm:^1.0.1":
+"pa11y-runner-axe@npm:~1.0.1":
   version: 1.0.2
   resolution: "pa11y-runner-axe@npm:1.0.2"
   dependencies:
@@ -10183,32 +10183,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pa11y-runner-htmlcs@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "pa11y-runner-htmlcs@npm:1.2.0"
+"pa11y-runner-htmlcs@npm:~1.2.1":
+  version: 1.2.1
+  resolution: "pa11y-runner-htmlcs@npm:1.2.1"
   dependencies:
-    html_codesniffer: ^2.4.1
-  checksum: 0e261f132825b06efc45b22e2098a99e456de59cfeb64842034cd91f4a09c8ac55a393907232c3cb8cd1b5a88f8d412c343048d81d81a276d3a349df60c24717
+    html_codesniffer: ~2.4.1
+  checksum: 07d4e755f104a7c748e8c45418f5427276b0d03dc96da60d842985da639addc201ea511125cc351b0f37bd66e574999b58020dae1bddd84ee8ec53f2442246ee
   languageName: node
   linkType: hard
 
 "pa11y@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "pa11y@npm:5.3.0"
+  version: 5.3.1
+  resolution: "pa11y@npm:5.3.1"
   dependencies:
-    commander: ^3.0.2
-    node.extend: ^2.0.2
-    p-timeout: ^2.0.1
-    pa11y-reporter-cli: ^1.0.1
-    pa11y-reporter-csv: ^1.0.0
-    pa11y-reporter-json: ^1.0.0
-    pa11y-runner-axe: ^1.0.1
-    pa11y-runner-htmlcs: ^1.2.0
-    puppeteer: ^1.13.0
-    semver: ^5.6.0
+    commander: ~3.0.2
+    node.extend: ~2.0.2
+    p-timeout: ~2.0.1
+    pa11y-reporter-cli: ~1.0.1
+    pa11y-reporter-csv: ~1.0.0
+    pa11y-reporter-json: ~1.0.0
+    pa11y-runner-axe: ~1.0.1
+    pa11y-runner-htmlcs: ~1.2.1
+    puppeteer: ~1.19.0
+    semver: ~5.7.0
   bin:
-    pa11y: ./bin/pa11y.js
-  checksum: 05f116ed76bf54b9c199a41cba435f8214ed27e3a248baed30da4c6216bb4184d3f8cf95bb6597f377386a94d5373ae818be0526f226917230779894ea3b9d48
+    pa11y: bin/pa11y.js
+  checksum: 2309806b0d27e0c0de24f007b666df7dada22b4f02686646ee8b305445bf1f0eac76fbdd2ce85039599c50a0df6e96a6bd8e506e3463856d4f0500b47893875d
   languageName: node
   linkType: hard
 
@@ -10793,9 +10793,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^1.13.0":
-  version: 1.20.0
-  resolution: "puppeteer@npm:1.20.0"
+"puppeteer@npm:~1.19.0":
+  version: 1.19.0
+  resolution: "puppeteer@npm:1.19.0"
   dependencies:
     debug: ^4.1.0
     extract-zip: ^1.6.6
@@ -10805,7 +10805,7 @@ __metadata:
     proxy-from-env: ^1.0.0
     rimraf: ^2.6.1
     ws: ^6.1.0
-  checksum: 4b470869a0cd626d1b1e830c1e046fa7654034e33cde6698684d9557a1e97e0d6bb1425436e6e595459c5c37fddb9be973212c02ad85552d623364d50b8d5b89
+  checksum: f3cc3b6ebcb3bec96cac021f29916232b60836b42b9ec8f4065e2e307569092cd675fce724f3927db85bd3872624d022aa70a845733ab4b438c89184575d95d0
   languageName: node
   linkType: hard
 
