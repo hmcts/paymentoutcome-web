@@ -1930,7 +1930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/commons@npm:^1, @sinonjs/commons@npm:^1.6.0, @sinonjs/commons@npm:^1.7.0, @sinonjs/commons@npm:^1.8.1":
+"@sinonjs/commons@npm:^1.6.0, @sinonjs/commons@npm:^1.7.0, @sinonjs/commons@npm:^1.8.1":
   version: 1.8.1
   resolution: "@sinonjs/commons@npm:1.8.1"
   dependencies:
@@ -1966,24 +1966,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/formatio@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@sinonjs/formatio@npm:5.0.1"
-  dependencies:
-    "@sinonjs/commons": ^1
-    "@sinonjs/samsam": ^5.0.2
-  checksum: 6f751c79a272f491395de1ae3821000526ac487b96d92ca3b4ec9e965ad64df6beac1fb8e5a03017dc9f4b18e8624170899ea3a6af628b8d32e3eb25e8c7e9ed
-  languageName: node
-  linkType: hard
-
-"@sinonjs/samsam@npm:^5.0.2, @sinonjs/samsam@npm:^5.2.0":
-  version: 5.3.0
-  resolution: "@sinonjs/samsam@npm:5.3.0"
+"@sinonjs/samsam@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "@sinonjs/samsam@npm:5.3.1"
   dependencies:
     "@sinonjs/commons": ^1.6.0
     lodash.get: ^4.4.2
     type-detect: ^4.0.8
-  checksum: e06b9fd78bd16a47e9fa41454bbe839aa3bfe477a8d83b056fb335bfc759a053600aab5571880553f50c6127cefa8cb00c1f1f49d6442522bd2222af4ea6f10f
+  checksum: 1c2c49d51b1840775980e9496707d68b936f443896f92e48150c4f7713d14904e576740e52660b602f8a53b665bd5f149c5c733758030758427ddb1621090279
   languageName: node
   linkType: hard
 
@@ -11954,17 +11944,16 @@ __metadata:
   linkType: hard
 
 "sinon@npm:^9.0.3":
-  version: 9.2.1
-  resolution: "sinon@npm:9.2.1"
+  version: 9.2.4
+  resolution: "sinon@npm:9.2.4"
   dependencies:
     "@sinonjs/commons": ^1.8.1
     "@sinonjs/fake-timers": ^6.0.1
-    "@sinonjs/formatio": ^5.0.1
-    "@sinonjs/samsam": ^5.2.0
+    "@sinonjs/samsam": ^5.3.1
     diff: ^4.0.2
     nise: ^4.0.4
     supports-color: ^7.1.0
-  checksum: 5d82f69b2b290d8398a78c67557a8c53bc5a03df1c649143eeaa02182b2f5b484631891c8ca00a953d5b6a0b630a8ccbafccde969a9255d1fc2511c3a6123a71
+  checksum: 34b881886daa4b491bb9147ccad43d662f58b45a1b6f1e8b26a405ad77041108306fac3648646335f00f702897f0ba12282588ab64de470f48f1a7678e08dc65
   languageName: node
   linkType: hard
 
