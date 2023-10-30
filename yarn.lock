@@ -3499,18 +3499,17 @@ __metadata:
   linkType: hard
 
 "babel-loader@npm:^8.0.6":
-  version: 8.2.1
-  resolution: "babel-loader@npm:8.2.1"
+  version: 8.3.0
+  resolution: "babel-loader@npm:8.3.0"
   dependencies:
-    find-cache-dir: ^2.1.0
-    loader-utils: ^1.4.0
-    make-dir: ^2.1.0
-    pify: ^4.0.1
+    find-cache-dir: ^3.3.1
+    loader-utils: ^2.0.0
+    make-dir: ^3.1.0
     schema-utils: ^2.6.5
   peerDependencies:
     "@babel/core": ^7.0.0
     webpack: ">=2"
-  checksum: 841ffb6672a7509c67ad65b4c6a5c4c1714f3c3940dac7090dd03b8154310e8cd845eaf4318d236a978e997a118743645737bf405d5349700ac70fdfcc0e9f8d
+  checksum: d48bcf9e030e598656ad3ff5fb85967db2eaaf38af5b4a4b99d25618a2057f9f100e6b231af2a46c1913206db506115ca7a8cbdf52c9c73d767070dae4352ab5
   languageName: node
   linkType: hard
 
@@ -9242,7 +9241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^2.0.0, make-dir@npm:^2.1.0":
+"make-dir@npm:^2.0.0":
   version: 2.1.0
   resolution: "make-dir@npm:2.1.0"
   dependencies:
@@ -9252,7 +9251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2":
+"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
   dependencies:
