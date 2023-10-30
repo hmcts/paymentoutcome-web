@@ -2203,11 +2203,11 @@ __metadata:
   linkType: hard
 
 "@types/copy-webpack-plugin@npm:^6.0.0":
-  version: 6.3.0
-  resolution: "@types/copy-webpack-plugin@npm:6.3.0"
+  version: 6.4.3
+  resolution: "@types/copy-webpack-plugin@npm:6.4.3"
   dependencies:
-    "@types/webpack": "*"
-  checksum: 93aa233496137cd6028c5c1eaddc0eb47d43269130307a7696cfa3293bf3463a46d23f5e06c8f0b0c7b6eb35c45e6094b842f94e1def998e7db6d067cd669cc0
+    "@types/webpack": ^4
+  checksum: 5cd65e36e2610721484d4fa14a5cb5daf0b97772be335eff64c4289380ba691c74401ccabc0bf723f068c1633f234713dc32a792ccc695e173703f172f2ce5c4
   languageName: node
   linkType: hard
 
@@ -4878,8 +4878,8 @@ __metadata:
   linkType: hard
 
 "copy-webpack-plugin@npm:^6.1.0":
-  version: 6.3.1
-  resolution: "copy-webpack-plugin@npm:6.3.1"
+  version: 6.4.1
+  resolution: "copy-webpack-plugin@npm:6.4.1"
   dependencies:
     cacache: ^15.0.5
     fast-glob: ^3.2.4
@@ -4894,7 +4894,7 @@ __metadata:
     webpack-sources: ^1.4.3
   peerDependencies:
     webpack: ^4.37.0 || ^5.0.0
-  checksum: 39f19a43e2d88fa8ef2ea0fe85cab99d964b150feb5ee22c0d4d729442575e50f3369f81cdc2041c9178fbc8de91d784b9f20ef43338c241b060981de8a3c510
+  checksum: b597938a6bb4a272ee94604e90088f1f9452309b5d41f377f81090ec69968e984c77764da76c9ad07c8692ec018abbe815fd685b9e74b57e2dd1f3180ada60ce
   languageName: node
   linkType: hard
 
