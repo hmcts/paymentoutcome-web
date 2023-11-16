@@ -2512,11 +2512,11 @@ __metadata:
   linkType: hard
 
 "@types/request-promise-native@npm:^1.0.18":
-  version: 1.0.20
-  resolution: "@types/request-promise-native@npm:1.0.20"
+  version: 1.0.21
+  resolution: "@types/request-promise-native@npm:1.0.21"
   dependencies:
     "@types/request": "*"
-  checksum: c2bbcb940fc47fe7ebd5f654c91fca694c69faaa40dea520ccf5006d2d7caa1aaa8df5a3e874b2e26b236c014249477168e2a90d11893ebb3b7fb05ca5831128
+  checksum: 341af69971a366be4f3f1abf445f88a1edd3ef4a140cf0139d707fd6f66e3b10e94be5561bc3e137a713810f2e62af073b933061995eef4a3731fb7569be4448
   languageName: node
   linkType: hard
 
