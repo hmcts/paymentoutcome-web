@@ -68,6 +68,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/eslint-parser": "^7.11.0",
     "@babel/preset-env": "^7.11.5",
     "@types/chai-as-promised": "^7.1.1",
     "@types/copy-webpack-plugin": "^6.0.0",
@@ -78,7 +79,6 @@
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/eslint-plugin-tslint": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
-    "@babel/eslint-parser": "^7.11.0",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -130,5 +130,5 @@
     "ajv": "6.12.6",
     "http-cache-semantics": "4.1.1"
   },
-  "packageManager": "yarn@3.7.0"
+  "packageManager": "yarn@3.6.1"
 }
