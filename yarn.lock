@@ -4242,7 +4242,7 @@ __metadata:
     jest-environment-jsdom: ^29.0.5
     jquery: ^3.5.1
     lodash: ^4.17.20
-    mini-css-extract-plugin: ^0.9.0
+    mini-css-extract-plugin: ^0.12.0
     mock-require: ^3.0.2
     nock: ^13.0.5
     nodemon: ^2.0.2
@@ -9455,17 +9455,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "mini-css-extract-plugin@npm:0.9.0"
+"mini-css-extract-plugin@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "mini-css-extract-plugin@npm:0.12.0"
   dependencies:
     loader-utils: ^1.1.0
     normalize-url: 1.9.1
     schema-utils: ^1.0.0
     webpack-sources: ^1.1.0
   peerDependencies:
-    webpack: ^4.4.0
-  checksum: e5cf437c15e4adf119d3a5af1bb604c880bc90a637aaf0535c8db68219efec42dcace1c54789422dec05d76ced98c44ef89ae44a3c556e34936fdbdd4743a210
+    webpack: ^4.4.0 || ^5.0.0
+  checksum: 0a7744667c5a85423b7e335418299e6ac5cbd855fe37048fb487a5b1af46c7d41b85bfee0e20d1dd59598396ede8bd87da75a6f1758ae6fd4e8b65d58cc52732
   languageName: node
   linkType: hard
 
