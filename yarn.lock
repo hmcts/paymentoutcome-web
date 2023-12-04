@@ -12095,12 +12095,12 @@ __metadata:
   linkType: hard
 
 "sinon-chai@npm:^3.4.0":
-  version: 3.5.0
-  resolution: "sinon-chai@npm:3.5.0"
+  version: 3.7.0
+  resolution: "sinon-chai@npm:3.7.0"
   peerDependencies:
     chai: ^4.0.0
-    sinon: ">=4.0.0 <10.0.0"
-  checksum: 0746c6ac1d568dd29a88193d4633b5b3d0318decb927514f1e553bd30c1b37293066d81d5416bb7b14a95c7903f8bb3d6383552e66bd538acd12b56544bedd2b
+    sinon: ">=4.0.0"
+  checksum: 49a353d8eb66cc6db35ac452f6965c72778aa090d1f036dd1e54ba88594b1c3f314b1a403eaff22a4e314f94dc92d9c7d03cbb88c21d89e814293bf5b299964d
   languageName: node
   linkType: hard
 
