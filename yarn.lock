@@ -2127,11 +2127,11 @@ __metadata:
   linkType: hard
 
 "@snyk/protect@npm:^1.1081.0":
-  version: 1.1253.0
-  resolution: "@snyk/protect@npm:1.1253.0"
+  version: 1.1259.0
+  resolution: "@snyk/protect@npm:1.1259.0"
   bin:
     snyk-protect: bin/snyk-protect
-  checksum: ea89c03d29cc987ba8669e283174873c147586c1334ec8093088297f7a0e0ea07800a6e41b6fc822e54630ba98863a9900eee5eb65fe5da47efa7dcf549e01b1
+  checksum: 2fbfdc94c0686122b3b67324f19db52759d8538827baefd29000de8d2b8aa1e4ead08ef08c58bcc342803638d3a422575d8f73f2dea842392a17a6b424986739
   languageName: node
   linkType: hard
 
