@@ -116,7 +116,7 @@
     "lodash": "^4.17.21",
     "glob-parent": "^6.0.1",
     "json-schema": "^0.4.0",
-    "follow-redirects": "^1.14.7",
+    "follow-redirects": "^1.15.4",
     "minimist": "^1.2.6",
     "moment": "^2.29.4",
     "async": "^2.6.4",
