@@ -1,0 +1,28 @@
+{% extends "template-welsh.njk" %}
+
+{% block content %}
+  {% if not error %}
+    {% from "govuk/components/panel/macro.njk" import govukPanel %}
+    {{ govukPanel({
+      titleText: "Taliad yn llwyddiannus",
+      html: "Eich cyfeirnod talu yw<br><strong>" + result.reference + "</strong>"
+    }) }}
+  {% else %}
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Mae yna broblem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list">
+          <li>
+            Roedd eich taliad cerdyn yn aflwyddiannus.
+          </li>
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+  <p class="govuk-body">
+    <a href="{{url}}/{{result.ccd_case_number}}#Service Request">Dychwelyd i gais gwasanaeth</a>
+  </p>
+{% endblock %}
+

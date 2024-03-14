@@ -1,8 +1,18 @@
 import { Application } from 'express';
 import { PayhubService } from '../app/payhub/payhubService';
 const config = require('config');
-
+const url = require('url');
 const exuiUrl =  config.get('exui.url').replace('.prod', '');
+
+function getLanguage(urlString: any) {
+  const parsedUrl = url.parse(urlString, true);
+  const query = parsedUrl.query
+  if (query.language === "cy") {
+    return "cy";
+  } else {
+    return "en";
+  }
+}
 
 export default function(app: Application): void {
 
@@ -11,14 +21,18 @@ export default function(app: Application): void {
     PayhubService
     .getPaymentStatus(uuid)
     .then((r: any) => {
+      const language = getLanguage(req.url);
+      const render = language === "cy" ? 'home-welsh' : 'home';
       if(r.status == "Success") {
-      res.render('home', { error: false, result: r, url: exuiUrl});
+      res.render(render, { error: false, result: r, url: exuiUrl});
       }
       else {
-       res.render('home', { error: true, result: r, url: exuiUrl });
+       res.render(render, { error: true, result: r, url: exuiUrl });
       }
     }).catch(()=> {
-      res.render('home', { error: true, result: [], url: exuiUrl });
+      const language = getLanguage(req.url);
+      const render = language === "cy" ? 'home-welsh' : 'home';
+      res.render(render, { error: true, result: [], url: exuiUrl });
     });
   });
 }
