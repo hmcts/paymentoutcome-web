@@ -32,3 +32,5 @@ coverage/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+config/local-development.json
