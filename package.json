@@ -112,6 +112,9 @@
     "webpack-node-externals": "^3.0.0"
   },
   "resolutions": {
+    "braces": "^3.0.3",
+    "chokidar": "^3.6.0",
+    "micromatch": "^4.0.7",
     "formidable": "^3.2.4",
     "lodash": "^4.17.21",
     "glob-parent": "^6.0.1",
