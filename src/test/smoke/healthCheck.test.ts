@@ -1,6 +1,6 @@
 import request from 'supertest';
 
-const frontend = process.env.TEST_URL || 'https://localhost:8080';
+const frontend = process.env.TEST_URL || 'http://localhost:8080';
 
 describe('paymentoutcome web health check', () => {
   it('should return a 200 status', async () => {
