@@ -135,7 +135,9 @@
     "ip": "^2.0.1",
     "body-parser": "^1.20.3",
     "serve-static": "^1.16.2",
-    "path-to-regexp": "^0.1.0"
+    "path-to-regexp": "^0.1.0",
+    "cross-spawn": "7.0.6",
+    "cookie": "^0.7.0"
   },
   "packageManager": "yarn@3.6.1"
 }
