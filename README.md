@@ -8,7 +8,7 @@ If you need to create a new application, you can simply use this one as a starti
 
 ## What's inside
 
-The template is a working application with a minimal setup. It contains:
+The template is a working application with a minimal setup. It contains:-
   * application skeleton
   * common dependencies
   * Docker setup
